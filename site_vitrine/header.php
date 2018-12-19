@@ -73,6 +73,7 @@
                                 </ul>
                             </li>
                             <li><a href="?page=borne">Bornes</a></li>
+                            <li><a href="?page=BO">BO</a></li>
                         </ul>
                     </div>
                 </nav>

@@ -14,11 +14,8 @@ include("db.php");
         ?>
         <option> <?php echo $consult->nom; ?></option>
         <?php
-         if ($consult->nom){
-            $stock = $consult->stock;
         }
-        }
-?>
+        ?>
     </select>
     <input type="submit" value="rechercher" />
     </form>
@@ -42,7 +39,7 @@ include("db.php");
     <hr>
     <h2>Modification du stock</h2>
     <form method="POST" action="">
-    <select name="nom">
+    <select name="name">
     <?php
         
          $req1 = $bdd->query('SELECT * FROM consommables');
@@ -62,12 +59,11 @@ include("db.php");
     <input type="submit" name="valider"/>
     </form>
     <?php
-        if(isset($_POST["stock"]) && isset($_POST["nom"])){
+        if(isset($_POST["stock"]) && isset($_POST["name"])){
             $stock = $_POST["stock"];
-            $nom = $_POST["nom"];
+            $nom = $_POST["name"];
             
             $req2= $bdd->query('UPDATE consommables SET stock='.$stock.' WHERE nom="'.$nom.'"');
-            //echo $req2;
         }
     
     ?>
@@ -75,7 +71,7 @@ include("db.php");
     
     <hr>
     
-    <h2>ajout d'un noubeau produit</h2> 
+    <h2>ajout d'un nouveau produit</h2> 
     
     <form method="post" action="">
         <label>nom* : </label>
@@ -87,7 +83,10 @@ include("db.php");
         <label>description* : </label>
         <input type="text" name="description" />
         <label>type* : </label>
-        <input type="text" name="type" />
+        <select name="type">
+            <option>papeterie</option>
+            <option>encre</option>
+        </select>
         <input type="submit" name="valider"/>
     </form>
       <?php
@@ -99,8 +98,7 @@ include("db.php");
             $type = $_POST["type"];
             
            $req3= $bdd->query('INSERT INTO consommables(nom, stock, prix, description, type) VALUES("'.$nom.'",'.$stock.','.$prix.',"'.$description.'","'.$type.'")');
-        }
-    
+        } 
     ?>  
       
 </div>

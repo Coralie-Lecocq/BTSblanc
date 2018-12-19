@@ -1,0 +1,249 @@
+/* ==========================================================================
+                        Responsive design ÉCRAN COUPÉ EN 2
+========================================================================== */
+
+@media screen and (max-width:1000px) {
+    h1 {
+        font-size: 25px;
+
+    }
+    .header h1 {
+        margin-left: 0px;
+    }
+    .connexion ul {
+        margin-top: 40px;
+    }
+
+    .appel {
+        margin-top: 35px;
+        font-size:13px;
+    }
+
+    #espace li {
+        padding: 25px;
+        width: 150px;
+        height: 100px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        font-family: 'Arial', sans-serif;
+        letter-spacing: 1px;
+        font-size: 0.7em;
+    }
+
+    #menu {
+        margin-top: 30px;
+    }
+    
+    #fixrdv {
+        font-size: 15px;
+        padding: 10px 50px;
+    }
+
+    #color div p {
+        padding-bottom: 20px;
+    }
+
+    #adresse {
+        margin: 0 0 20px 0;
+        border: none;
+    }
+
+    #space {
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+    }
+
+    #laboratoire_info span,
+    #laboratoire_info p,
+    #actu_info span,
+    #actu_info p,
+    #about_info span,
+    #about_info p,
+    #rdv_info {
+        margin: 0 auto;
+        padding: 0 0 20px 0;
+        width: 80%;
+    }
+
+    #contact_info h2,
+    #laboratoire_info h2,
+    #actu_info h2,
+    #about_info h2,
+    #plan h2 {
+        margin: 50px 10%;
+    }
+    
+    .connecte {
+        position: absolute;
+        top : -50px;
+        right: 0;
+        width: 35%;
+        text-align: center;
+    }
+
+}
+
+
+/* ==========================================================================
+                        Responsive design vue TABLETTE
+========================================================================== */
+
+@media screen and (max-width:650px) {
+    #fixrdv {
+        display: none;
+    }
+
+    #espace ul {
+        display: none;
+    }
+
+    .header h1 {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 100px;
+    }
+    
+    .header {
+        width: 100%;
+    }
+
+    #about p {
+        margin: 0px 10%;
+    }
+
+    #color div h2 {
+        padding-top: 50px;
+    }
+
+    .retour {
+        display: none;
+    }
+
+    .style_form {
+        margin-bottom: 20px;
+        width: 70%;
+        height: 30px;
+        padding-left: 10px;
+    }
+
+    #espace {
+        display: none;
+    }
+
+    #contact {
+        margin-top: 50px;
+        background-image: url(../img/pils.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 10px;
+    }
+
+    #contact_info img {
+        width: 100%;
+    }
+    
+    .header_form h1 {
+        display: block;
+        width: 100%;
+    }
+
+    #contact_info h2,
+    #laboratoire_info h2,
+    #actu_info h2,
+    #about_info h2,
+    #plan h2 {
+        font-size: 35px;
+        margin: 50px 0;
+    }
+    
+    .appel {
+        margin-top: 80px;
+    }
+    
+    .connecte {
+    position: absolute;
+    top: 0px;
+    width: 80%;
+    }
+    
+    #space_mob{
+        display:block;
+        background-image: url(../img/Laboratoires_redim.jpg);
+        background-size:cover;
+    }
+    
+    #slide-1 .bcg{
+        display:none;
+    }
+    
+    #space{
+        display: none;
+    }
+    
+}
+
+/* ==========================================================================
+                        Responsive design vue MOBILE
+========================================================================== */
+
+@media screen and (max-width: 480px)
+ {
+    body {
+        width:100%;
+    }
+
+    #en-tete p {
+        text-align: center;
+    }
+
+    #menu a {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    #espace img {
+        display: none;
+    }
+
+    .version_mob {
+        display: block;
+    }
+
+    .cases {
+        display: block;
+        margin: 5px auto;
+        width: 50%;
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .cases h3 {
+        padding-top: 5%;
+    }
+
+    .cases p {
+        padding-bottom: 10%;
+    }
+
+    .connexion {
+        display: none;
+    }
+    
+    .connecte {
+        display: none;
+    }
+    
+    .appel{
+        position:relative;
+        top:-50px;
+        right:0;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+}

@@ -1,0 +1,804 @@
+/* ==========================================================================
+                                Général
+========================================================================== */
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body, #rdv_index {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    position: relative;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    width: 500px;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    letter-spacing: 8px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    padding: 19px 0;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 24px;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+td {
+    padding: 0 20px;
+}
+
+
+/* ==========================================================================
+                        Header de chaque page
+========================================================================== */
+
+#logo{
+    width:150px;
+    position:relative;
+    left:-200px;
+}
+
+.header {
+    background-color: #fff;
+}
+
+.header h1 {
+    margin-left: 100px;
+}
+
+.header h1 a {
+    text-decoration: none;
+    color: #116089;
+}
+
+.header p {
+    color: #116089;
+    position: absolute;
+    top: 90px;
+    right: 50px;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+                        3 lignes en haut de la page
+========================================================================== */
+
+#en-tete {
+    width: 100%;
+    display: block;
+}
+
+#lines {
+    display: inline-block;
+}
+
+#line1 {
+    height: 10px;
+    position: absolute;
+    width: 33%;
+    background-color: #02b8bf;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+#line2 {
+    height: 10px;
+    position: absolute;
+    width: 100%;
+    background-color: #1990ce;
+    z-index: 1;
+    top: 0;
+}
+
+#line3 {
+    height: 10px;
+    position: absolute;
+    width: 33%;
+    background-color: #07bc83;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}
+
+
+/* ==========================================================================
+                            Fixer un rdv : item fixe
+========================================================================== */
+
+#fixrdv {
+    background-color: #07bc83;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 90px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: 100;
+    border-radius: 5px;
+}
+
+
+/* ==========================================================================
+                            Encart Inscription/Connexion
+========================================================================== */
+
+.connexion {
+    position: absolute;
+    right: 70px;
+    top: 45px;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.connexion li a {
+    color: #333;
+}
+
+
+/* Statut Connecté */
+
+.connecte {
+    position: relative;
+    top: -200px;
+}
+
+
+/* Connexion/Inscription/Déconnexion invisible quand on n'est pas en version mobile */
+
+.version_mob {
+    display: none;
+}
+
+
+/* ==========================================================================
+                        Page Conenxion/Inscription
+========================================================================== */
+
+.header_form {
+    color: #116089;
+    width: 100%;
+}
+
+.header_form h1 {
+    margin: 15px auto;
+    border-bottom: 1px #116089 solid;
+    padding: 10px 0;
+}
+
+.form_insc {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.style_form {
+    margin-bottom: 20px;
+    width: 40%;
+    height: 30px;
+    padding-left: 10px;
+}
+
+#inscription {
+    width: 100px;
+}
+
+#member {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#member a {
+    color: #116089;
+    font-weight: bold;
+}
+
+#member a:hover {
+    text-decoration: underline;
+}
+
+
+/* Texte erreur ou non lors de la connexion/inscription */
+
+.on-connect {
+    color: #ff0000;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+
+/* Bouton retour */
+
+.retour {
+    position: relative;
+    top: 10px;
+}
+
+.back {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.back img {
+    width: 30px;
+    position: relative;
+    top: 9px;
+    left: -12px;
+}
+
+.back a {
+    color: #116089;
+}
+
+
+/* Info bulle */
+
+.form_insc span {
+    position: absolute;
+    margin-top: 23px;
+    margin-left: -35px;
+    color: #116089;
+    background: rgba(255, 255, 255, .7);
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+    transform: scale(0) rotate(-12deg);
+    font-size: 13px;
+}
+
+#identif:focus+span {
+    transform: scale(1) rotate(0);
+}
+
+#identif+span {
+    transition: all .25s;
+}
+
+
+/* ==========================================================================
+                                Menu navigation
+========================================================================== */
+
+#menu {
+    display: inline-block;
+    width: 100%;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+#menu a {
+    margin-right: 5%;
+}
+
+#menu a:hover {
+    color: #02b8bf;
+    transition: 0.5s;
+}
+
+#menu li {
+    padding: 15px 5%;
+    margin-top: -15px;
+}
+
+
+/* Couleur du lien accueil dans le menu */
+
+#accueil {
+    color: #02b8bf;
+}
+
+
+/* ==========================================================================
+                                Page Quiz
+========================================================================== */
+
+#quiz_index div,
+#quiz_index h3 {
+    text-align: center;
+}
+
+#reset {
+    display: flex;
+    margin: auto;
+    width: 78px;
+    margin-bottom: 50px;
+}
+
+#quiz_index h2 {
+    color: #02B8BF;
+}
+
+
+/* ==========================================================================
+                                Image Parallaxe
+========================================================================== */
+
+
+/* Slide 1 */
+
+#slide-1 .bcg {
+    background-image: url('../img/Laboratoires_redim.jpg');
+}
+
+#slide-1 .hsContent {
+    bottom: 200px;
+    top: auto;
+}
+
+.hsContent {
+    max-width: 500px;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.hsContainer {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hsContent h2 {
+    color: #fff8de;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 5px;
+    font-size: 35px;
+    line-height: 38px;
+    margin-bottom: 12px;
+    height: 100%;
+    font-family: 'Arial Black', Gadget, sans-serif;
+    letter-spacing: 8px;
+}
+
+#space_mob{
+    display:none;
+}
+
+
+/* ==========================================================================
+                            Différentes div de couleur
+========================================================================== */
+
+#color {
+    margin: 0 auto;
+}
+
+#color div h2 {
+    padding-top: 100px;
+}
+
+#color div p {
+    padding-bottom: 100px;
+}
+
+
+/* Carré en dessous des titres */
+
+.carreblanc,
+.carrebleu {
+    width: 15px;
+    height: 15px;
+    margin: 30px auto;
+    position: relative;
+    bottom: 20px;
+    padding: 0;
+}
+
+.carrebleu {
+    background-color: #02B8BF;
+}
+
+.carreblanc {
+    background-color: #fff;
+}
+
+
+/* ==========================================================================
+                                À propos
+========================================================================== */
+
+#about h2 a,
+#staff h2,
+#contact h2 a {
+    color: #02B8BF;
+    transition: 0.7s;
+}
+
+#about h2 a:hover,
+#contact h2 a:hover,
+#laboratoire h2 a:hover {
+    font-size: 60px;
+    transition: 0.7s;
+}
+
+#about p {
+    color: #666666;
+    text-align: justify;
+    margin: 0px 34%;
+    line-height: 24px;
+    font-size: 15px;
+}
+
+
+/* ==========================================================================
+                                Le laboratoire
+========================================================================== */
+
+#laboratoire {
+    background-image: url(../img/scientist.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 100px;
+    font-family: 'Open Sans' sans-serif;
+}
+
+#laboratoire h2 a {
+    color: #fff;
+    transition: 0.7s;
+}
+
+
+/* Cases "activités" */
+
+.cases {
+    display: inline-block;
+    background-color: rgba(70, 116, 137, 0.6);
+    width: 300px;
+    height: 140px;
+    margin: 10px;
+    padding: 15px 80px;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+
+/* ==========================================================================
+                                Le staff
+========================================================================== */
+
+#staff {
+    text-align: center;
+}
+
+#staff img {
+    width: 250px;
+    margin: 10px 20px;
+}
+
+.personnel {
+    width: 250px;
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.personnel:nth-child(1) h4 {
+    color: #02b8bf;
+}
+
+.personnel:nth-child(2) h4 {
+    color: #1990ce;
+}
+
+.personnel:nth-child(3) h4 {
+    color: #07bc83;
+}
+
+.personnel p {
+    color: #666666;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+                            Espace avec carrés explicatifs
+========================================================================== */
+
+#espace {
+    z-index: 2;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+#espace img {
+    width: 100%;
+}
+
+#espace ul {
+    position: absolute;
+    display: inline-block;
+    bottom: 5px;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#espace li {
+    padding: 50px;
+    width: 190px;
+    height: 130px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    vertical-align: top;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+
+#espace ul li:nth-child(1) {
+    background-color: rgba(2, 184, 191, 0.8);
+}
+
+#espace ul li:nth-child(2) {
+    background-color: rgba(25, 144, 206, 0.8);
+}
+
+#espace ul li:nth-child(3) {
+    background-color: rgba(7, 188, 131, 0.8);
+}
+
+
+/* ==========================================================================
+                                    Contact
+========================================================================== */
+
+#contact {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+#contact section {
+    display: inline-block;
+    padding: 0 90px;
+    vertical-align: top;
+}
+
+#contact section:first-child {
+    border-right: solid #e8e8e8 1px;
+}
+
+#contact span {
+    font-size: 25px;
+}
+
+#adresse {
+    border-right: solid #aaa 1px;
+    margin-left: -70px;
+}
+
+
+/* ==========================================================================
+                    Fond d'écran de toutes les pages annexes
+========================================================================== */
+
+#index_contact,
+#index_laboratoire,
+#index_actu,
+#about_index,
+#plan_index,
+#rdv_index {
+    background: url(../img/pills.png) no-repeat;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+                    Titres de toutes les pages annexes
+========================================================================== */
+
+#contact_info h2,
+#laboratoire_info h2,
+#actu_info h2,
+#about_info h2,
+#plan h2 {
+    margin: 50px 30%;
+    border-bottom: solid 1px #116089;
+    color: #116089;
+}
+
+
+/* ==========================================================================
+                Elements de même mise en forme de différentes pages
+========================================================================== */
+
+#laboratoire_info h3,
+#actu_info h3,
+#rdv_info p {
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+#laboratoire_info h3,
+#laboratoire_info p,
+#actu_info h3,
+#actu_info p,
+#about_info p,
+#rdv_info {
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+    width: 60%;
+    color: #fff;
+}
+
+#laboratoire_info,
+#actu_info,
+#about_info,
+#rdv_info {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#laboratoire_info img,
+#actu_info img {
+    width: 100px;
+}
+
+
+/* ==========================================================================
+                            Page contact
+========================================================================== */
+
+#contact_info {
+    text-align: center;
+}
+
+#contact_info span {
+    color: #116089;
+    font-weight: bold;
+}
+
+#contact_info table {
+    margin: 10px auto;
+    padding: 10px 0;
+}
+
+.horaires {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.infos_contact {
+    margin-top: 30px;
+}
+
+#contact_info img {
+    margin: 20px auto;
+    margin-bottom: 0;
+    width: 80%;
+}
+
+
+/* ==========================================================================
+                                    Map
+========================================================================== */
+
+#map {
+    margin: 50px auto;
+    width: 70%;
+    height: 200px;
+    background-color: #fff;
+}
+
+
+/* ==========================================================================
+                                    Footer
+========================================================================== */
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-size: 15px;
+    width:100%;
+}
+
+footer li {
+    padding: 0 10px;
+}
+
+footer a {
+    color: #116089;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+
+/* ==========================================================================
+                                Page Plan du site
+========================================================================== */
+
+#plan {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#plan li {
+    display: block;
+    padding: 10px 40px;
+}
+
+#plan ul {
+    font-size: 18px;
+    margin-top: 30px;
+    font-weight: bold;
+    color: #666;
+}
+
+#plan ul div {
+    display: inline-block;
+}
+
+#plan a {
+    font-size: ;
+    transition: 0.7s;
+}
+
+#plan a:hover {
+    font-size: 20px;
+    transition: 0.7s;
+    color: #116089;
+}
+
+
+/* ==========================================================================
+                            Page Prise de RDV
+========================================================================== */
+
+#rdv_info h2 {
+    margin: 0 5% 50px 5%;
+    padding-top: 50px;
+    border-bottom: solid 1px #116089;
+    color: #116089;
+}

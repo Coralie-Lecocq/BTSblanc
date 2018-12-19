@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GSB - Quiz</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/mobile.css" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="img/GSB.png" />
+    <script>
+        /*  // Get the modal
+            var modal = document.getElementById('myModal');
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+        }*/
+        
+        /* ===============================================QUESTIONS==================================================== */
+        let resultat = 0;
+
+
+        function reponse() {
+            var valeurSaisieV = document.getElementById("valeur1").checked;
+            var valeurSaisieF = document.getElementById("valeur").checked;
+            var explication = "Le virus du Sida (VIH) est transmissible par le sang, les sécrétions sexuelles et le lait maternel mais il n'est absolument pas contagieux. Vous pouvez donc embrasser chaleureusement une personne contaminée, lui serrer la main, boire dans le même verre, partager un téléphone ou des ustensiles de cuisine, utiliser des toilettes publiques, aller à la piscine… sans aucune crainte. Les larmes, la sueur et l'urine ne sont pas contaminantes, pas plus que les piqûres de moustiques ou les morsures d'animaux";
+
+            if (valeurSaisieV != "") {
+
+                document.getElementById("contenu").innerHTML = "Non, la réponse est fausse" + "<br>" +
+                    explication;
+            } else if (valeurSaisieF != "") {
+
+                document.getElementById("contenu").innerHTML = "Oui! Félicitations" + "<br>" + explication;
+                resultat++;
+            } else {
+                document.getElementById("vide1").innerHTML = "Veuillez électionner une réponse.";
+            }
+            afficher();
+        }
+
+
+        function reponse2() {
+            var valeurSaisie1 = document.getElementById("valeurVrai").checked;
+            var valeurSaisie2 = document.getElementById("valeurFaux").checked;
+            var explication2 = "Lors des pénétrations vaginales ou anales, le risque est majeur, que vous soyez homosexuel ou hétérosexuel ! Tous vos rapports avec pénétration doivent impérativement être protégés par l'usage systématique du préservatif tant que vous n'êtes pas certain de vos statuts sérologiques réciproques et de votre fidélité mutuelle. Seul le test de dépistage peut vous garantir votre séronégativité ou votre séropositivité vis-à-vis du virus du Sida. En son absence, seul le préservatif peut actuellement vous protéger efficacement contre une éventuelle contamination.";
+
+            if (valeurSaisie1 != "") {
+
+                document.getElementById("contenu2").innerHTML = "Non, la réponse est fausse" + "<br>" + explication2;
+            } else if (valeurSaisie2 != "") {
+
+                document.getElementById("contenu2").innerHTML = "Oui! Félicitations" + "<br>" + explication2;
+                resultat++;
+            } else {
+                document.getElementById("vide2").innerHTML = "Veuillez selectionner une réponse.";
+            }
+            afficher();
+        }
+
+
+        function reponse3() {
+            var valeurSaisie_un = document.getElementById("valeurv").checked;
+            var valeurSaisie_deux = document.getElementById("valeurf").checked;
+            var explication3 = "Que ce soit le coton servant à nettoyer la peau ou la seringue, un toxicomane ne doit impérativement partager aucun matériel servant à l'injection de la drogue car le risque de contamination est majeur. Si vous « sniffez » la drogue avec une paille, il ne faut pas non plus partager cette paille avec d'autres. En effet, la paroi nasale peut saigner ou être abîmée et vous risquez d'être contaminé ou de contaminer quelqu'un.";
+
+            if (valeurSaisie_un != "") {
+
+                document.getElementById("contenu3").innerHTML = "Oui! Félicitations " + "<br>" + explication3;
+                resultat++;
+                
+            } else if (valeurSaisie_deux != "") {
+
+                document.getElementById("contenu3").innerHTML = "Non, la réponse est vraie" + "<br>" + explication3;
+
+            } else {
+                document.getElementById("vide3").innerHTML = "Veuillez selectionner une réponse.";
+                
+            }
+            afficher();
+        }
+
+        /* ===============================================SCORES==================================================== */
+        function afficher() {
+            document.getElementById("score").innerHTML = "Voici votre score : "+ resultat + "/3";
+        }
+        
+    </script>
+</head>
+
+<body id="quiz_index">
+    <h2>Quiz</h2>
+    <div class="carrebleu"></div>
+
+    <h3>1/ Je peux attraper le virus du Sida en embrassant quelqu'un sur les joues ou en lui serrant la main ?</h3>
+    <div id="contenu">
+        <input type="radio" value="Vrai" name="Q1" id="valeur1"> Vrai <br>
+        <input type="radio" value="Faux" name="Q1" id="valeur"> Faux <br>
+        <p id="vide1"></p>
+        <button onclick="reponse()">Valider</button>
+    </div>
+    <br>
+
+
+    <h3>2/ Sans préservat, la pénétration chez les couples hétérosexuels présente peu de danger ?</h3>
+    <div id="contenu2">
+        <input type="radio" value="Vrai" name="Q2" id="valeurVrai"> Vrai <br>
+        <input type="radio" value="Faux" name="Q2" id="valeurFaux"> Faux <br>
+        <p id="vide2"></p>
+        <button onclick="reponse2()">Valider</button>
+    </div>
+    <br>
+
+
+    <h3>3/ Un toxicomane ne doit partager aucun matériel nécessaire à l'injection de la drogue ?</h3>
+    <div id="contenu3">
+        <input type="radio" value="Vrai" name="Q3" id="valeurv"> Vrai <br>
+        <input type="radio" value="Faux" name="Q3" id="valeurf"> Faux <br>
+        <p id="vide3"></p>
+        <button onclick="reponse3()" >Valider</button>
+    </div>
+
+    <h2>Score</h2>
+    <div class="carrebleu"></div>
+    <div id="score" >
+    </div>
+    <input id="reset" type="button" value="Réessayer" onclick="window.location.reload(false)">
+
+
+
+
+</body>
+
+</html>
